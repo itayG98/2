@@ -22,6 +22,11 @@ function update() {
     }
   });
   const actives = document.querySelectorAll(".active");
-
-  progress.style.width = (currentActive - 1) * 33 + "%";
+  progress.style.width =
+    (100 / (circels.length - 1)) * (currentActive - 1) + "%";
+  if (currentActive === 1) {
+    prev.disabled = true;
+  } else {
+    prev.disabled = false;
+  }
 }

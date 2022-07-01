@@ -26,7 +26,10 @@ function update() {
     (100 / (circels.length - 1)) * (currentActive - 1) + "%";
   if (currentActive === 1) {
     prev.disabled = true;
+  } else if (currentActive === circels.length) {
+    next.disabled = true;
   } else {
     prev.disabled = false;
+    next.disabled = false;
   }
 }
